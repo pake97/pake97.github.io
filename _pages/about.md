@@ -11,7 +11,8 @@ Hello world! I’m Amedeo Pachera, a Ph.D. Student at Université Claude Bernard
 
 My research lies in the integration of artificial and human intelligence to design data-intensive applications with the goal of making them efficient, effective, and aware of people's needs and values. This includes employing Human-in-the-loop techniques to enhance existing approaches in data management applications. I mainly focus on data quality tasks on graph data models, designing algorithm and user interactions to improve existing data cleaning approaches.
 
-
-  {% for post in site.publications reversed %}
+Publications
+======
+  <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}
+  {% endfor %}</ul>
