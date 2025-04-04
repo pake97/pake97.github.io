@@ -9,3 +9,7 @@ venue: "SIGMOD/PODS'25: International Conference on Management of Data"
 paperurl: ''
 citation: "A Pachera, A Bonifati, A Mauri - User-Centric Property Graph Repairs - SIGMOD/PODS'25: International Conference on Management of Data, 2025"
 ---
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OrJeYCOhmLk?si=1FD1O_cMgL9bO-Yy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
