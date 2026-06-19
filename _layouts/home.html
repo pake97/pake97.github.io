@@ -1,0 +1,158 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div class="ap-home">
+
+  <!-- ===================== HERO ===================== -->
+  <header class="ap-hero">
+    <div class="ap-wrap">
+      <div class="ap-hero__grid">
+        <div class="ap-hero__intro">
+          <div class="ap-eyebrow">amedeo.pachera ~ %<span class="ap-cursor"></span></div>
+          <h1 class="ap-name">Amedeo<br>Pachera<span class="ap-dot">.</span></h1>
+          <p class="ap-role">{{ page.role }}</p>
+          <div class="ap-meta">
+            {% if page.location %}<span><i class="fa-solid fa-location-dot"></i>{{ page.location }}</span>{% endif %}
+            {% if site.author.employer %}<span><i class="fa-solid fa-building-columns"></i>{{ site.author.employer }}</span>{% endif %}
+            <span><i class="fa-solid fa-flask"></i>LIRIS Lab</span>
+          </div>
+          <div class="ap-cta">
+            <a class="ap-btn ap-btn--primary" href="{{ base_path }}/files/Amedeo_Pachera_CV.pdf"><i class="fa-solid fa-file-lines"></i> Curriculum Vitae</a>
+            {% if site.author.googlescholar %}<a class="ap-btn" href="{{ site.author.googlescholar }}"><i class="ai ai-google-scholar"></i> Scholar</a>{% endif %}
+            {% if site.author.github %}<a class="ap-btn" href="{{ site.author.github }}"><i class="fa-brands fa-github"></i> GitHub</a>{% endif %}
+            {% if site.author.linkedin %}<a class="ap-btn" href="{{ site.author.linkedin }}"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>{% endif %}
+            {% if site.author.email %}<a class="ap-btn" href="mailto:{{ site.author.email }}"><i class="fa-solid fa-envelope"></i> Email</a>{% endif %}
+          </div>
+        </div>
+
+        <div class="ap-portrait">
+          <svg class="ap-graph-bg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g stroke="#39d0d8" stroke-opacity="0.35" stroke-width="1">
+              <line x1="60" y1="80" x2="190" y2="60"/>
+              <line x1="190" y1="60" x2="320" y2="110"/>
+              <line x1="60" y1="80" x2="120" y2="210"/>
+              <line x1="190" y1="60" x2="210" y2="200"/>
+              <line x1="120" y1="210" x2="210" y2="200"/>
+              <line x1="210" y1="200" x2="320" y2="110"/>
+              <line x1="120" y1="210" x2="90" y2="330"/>
+              <line x1="210" y1="200" x2="300" y2="320"/>
+              <line x1="90" y1="330" x2="300" y2="320"/>
+              <line x1="320" y1="110" x2="350" y2="240"/>
+              <line x1="300" y1="320" x2="350" y2="240"/>
+            </g>
+            <g fill="#39d0d8">
+              <circle cx="60"  cy="80"  r="5"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite"/></circle>
+              <circle cx="190" cy="60"  r="7"><animate attributeName="opacity" values="1;0.5;1" dur="4s" repeatCount="indefinite"/></circle>
+              <circle cx="320" cy="110" r="6"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/></circle>
+              <circle cx="120" cy="210" r="6"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite"/></circle>
+              <circle cx="210" cy="200" r="8"><animate attributeName="opacity" values="1;0.6;1" dur="4.4s" repeatCount="indefinite"/></circle>
+              <circle cx="90"  cy="330" r="5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/></circle>
+              <circle cx="300" cy="320" r="6"><animate attributeName="opacity" values="0.7;1;0.7" dur="3.8s" repeatCount="indefinite"/></circle>
+              <circle cx="350" cy="240" r="5"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.3s" repeatCount="indefinite"/></circle>
+            </g>
+          </svg>
+          <img src="{{ base_path }}/images/profile-web.jpg" alt="Amedeo Pachera">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="ap-section ap-reveal">
+    <div class="ap-wrap">
+      <div class="ap-section__label">// whoami</div>
+      <h2 class="ap-section__title">About</h2>
+      <div class="ap-prose">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH AREAS ===================== -->
+  {% if page.research_areas %}
+  <section class="ap-section ap-reveal">
+    <div class="ap-wrap">
+      <div class="ap-section__label">// focus</div>
+      <h2 class="ap-section__title">Research</h2>
+      <div class="ap-cards">
+        {% for area in page.research_areas %}
+        <div class="ap-card">
+          <div class="ap-card__icon"><i class="{{ area.icon }}"></i></div>
+          <h3>{{ area.title }}</h3>
+          <p>{{ area.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% if page.interests %}
+      <div class="ap-chips" style="margin-top:1.6rem">
+        {% for i in page.interests %}<span class="ap-chip">{{ i }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ===================== NEWS ===================== -->
+  {% if page.news %}
+  <section class="ap-section ap-reveal">
+    <div class="ap-wrap">
+      <div class="ap-section__label">// log</div>
+      <h2 class="ap-section__title">News</h2>
+      <div class="ap-news">
+        {% for n in page.news %}
+        <div class="ap-news__item">
+          <div class="ap-news__date">{{ n.date }}</div>
+          <div class="ap-news__body">{{ n.text }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ===================== SELECTED PUBLICATIONS ===================== -->
+  <section class="ap-section ap-reveal">
+    <div class="ap-wrap">
+      <div class="ap-section__label">// output</div>
+      <h2 class="ap-section__title">Selected Publications</h2>
+      <div class="ap-pub">
+        {% assign pubs = site.publications | sort: 'date' | reverse %}
+        {% for post in pubs limit: 5 %}
+        {% assign target = post.paperurl | default: post.url %}
+        <div class="ap-pub__item">
+          <div class="ap-pub__venue">{{ post.venue_short | default: "PAPER" }}<small>{{ post.date | date: "%Y" }}</small></div>
+          <div>
+            <p class="ap-pub__title"><a href="{% if post.paperurl != '' and post.paperurl %}{{ post.paperurl }}{% else %}{{ base_path }}{{ post.url }}{% endif %}">{{ post.title }}</a></p>
+            {% if post.authors %}<p class="ap-pub__authors">{{ post.authors }}</p>{% endif %}
+            <div class="ap-pub__links">
+              <a href="{{ base_path }}{{ post.url }}">details →</a>
+              {% if post.paperurl != '' and post.paperurl %}<a href="{{ post.paperurl }}">paper ↗</a>{% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <a class="ap-more" href="{{ base_path }}/publications/">all publications</a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.ap-reveal');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (e) { e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>

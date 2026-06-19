@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Amedeo Pachera"
 title_separator          : "-"
 name                     : &name "Amedeo Pachera"
-description              : &description "personal description"
+description              : &description "Amedeo Pachera — PhD Candidate in Computer Science at Université Claude Bernard Lyon 1 (LIRIS). Research on Graph Machine Learning, Human-AI collaboration, and data management."
 url                      : https://pake97.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "pake97/pake97.github.io"
@@ -21,12 +21,12 @@ repository               : "pake97/pake97.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile-web.jpg"
   name             : "Amedeo Pachera"
-  pronouns         : # example: "she/her"  
-  bio              : "Ph.D. Student in computer science"
+  pronouns         : # example: "she/her"
+  bio              : "PhD Candidate · Graph ML & data management"
   location         : "Lyon, France"
-  employer         : "Lyon 1 University"
+  employer         : "Université Claude Bernard Lyon 1"
   uri              : # URL
   email            : "amedeo.pachera@univ-lyon1.fr" 
 
