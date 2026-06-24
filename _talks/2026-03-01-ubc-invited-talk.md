@@ -4,7 +4,7 @@ collection: talks
 type: "Invited talk"
 permalink: /talks/2026-ubc-invited-talk
 venue: "University of British Columbia — Database Research Group"
-date: 2026-03-01
+date: 2026-03-12
 location: "Vancouver, Canada"
 ---
 
